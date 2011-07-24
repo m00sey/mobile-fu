@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name        = "mobile_fu-rails3"
   s.version     = "1.0.2"
   s.authors     = ["Brendan Lim", "Jori Hardman"]
-  s.email       = ["jorihardman@gmail.com"]
+  s.email       = ["brendangl@gmail.com", "jorihardman@gmail.com"]
   s.homepage    = "https://github.com/jyro215/mobile-fu"
   s.summary     = "Easily handling of mobile requests in action controller."
   s.description = "This is a rewrite of the mobile-fu gem using Rails 3 railties."
