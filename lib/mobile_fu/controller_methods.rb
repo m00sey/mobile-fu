@@ -58,8 +58,8 @@ module MobileFu
       def set_mobile_format
         if request.format.html? and is_mobile_device? and not request.xhr?
           session[:mobile_view] ||= true
-          request.format = session[:mobile_view] ? :mobile : :html
         end
+        request.format = session[:mobile_view] ? :mobile : :html
       end
       
       # Returns either true or false depending on whether or not the format of the
