@@ -57,9 +57,7 @@ module MobileFu
       # the user has opted to use either the 'Standard' view or 'Mobile' view.      
       def set_mobile_format
         session[:mobile_view] ||= is_mobile_device? ? true : false
-        if session[:mobile_view] and request.format.html? and not request.xhr?
-          request.format = :mobile
-        end
+        request.format = :mobile if session[:mobile_view] and request.format.html? and not request.xhr?
       end
       
       # Returns either true or false depending on whether or not the format of the
