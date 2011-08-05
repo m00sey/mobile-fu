@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "mobile_fu-rails3"
-  s.version     = "1.0.4"
+  s.version     = "1.0.5"
   s.authors     = ["Brendan Lim", "Jori Hardman"]
   s.email       = ["brendangl@gmail.com", "jorihardman@gmail.com"]
   s.homepage    = "https://github.com/jyro215/mobile-fu"

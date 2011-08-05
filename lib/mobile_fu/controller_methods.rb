@@ -56,10 +56,10 @@ module MobileFu
       # Determines the request format based on whether the device is mobile or if
       # the user has opted to use either the 'Standard' view or 'Mobile' view.      
       def set_mobile_format
-        if request.format.html? and is_mobile_device? and not request.xhr?
-          session[:mobile_view] ||= true
+        session[:mobile_view] ||= is_mobile_device? ? true : false
+        if session[:mobile_view] and request.format.html? and not request.xhr?
+          request.format = :mobile
         end
-        request.format = session[:mobile_view] ? :mobile : :html
       end
       
       # Returns either true or false depending on whether or not the format of the
