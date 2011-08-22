@@ -26,7 +26,7 @@ module MobileFu
       # with modification to work for mobile browsers.
       def user_agent_device_name
         @user_agent_device_name ||= begin
-          ua = request.user_agent
+          ua = request.user_agent.to_s
           return nil if ua.nil?
           ua.downcase!
 

@@ -8,8 +8,8 @@ module MobileFu
         raise Exception.new("MobileFu: XHTML DOCTYPE version must be in the format of '1.0' or '1.1', etc.") unless version.include?('.')
     
         doc_type = "<?xml version=\"1.0\" charset=\"UTF-8\" ?>\n"
-        doc_type += "<!DOCTYPE html PUBLIC "
-        doc_type += case type
+        doc_type << "<!DOCTYPE html PUBLIC "
+        doc_type << case type
                     when :mobile
                       "\"-//WAPFORUM//DTD XHTML Mobile #{version}//EN\" \"http://www.openmobilealliance.org/tech/DTD/xhtml-mobile#{version.gsub('.','')}.dtd\">"
                     when :basic
