@@ -69,6 +69,8 @@ module MobileFu
       # Returns either true or false depending on whether or not the user agent of
       # the device making the request is matched to a device in our regex.      
       def is_mobile_device?
+        puts "mobile fu #{request.user_agent.to_s.downcase}"
+        puts "#{MobileFu::ActionController::MOBILE_USER_AGENTS}"
         !!(request.user_agent.to_s.downcase =~ Regexp.new(MobileFu::ActionController::MOBILE_USER_AGENTS))
       end
 
