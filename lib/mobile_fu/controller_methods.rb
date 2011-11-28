@@ -75,8 +75,8 @@ module MobileFu
       # Can check for a specific user agent
       # e.g., is_device?('iphone') or is_device?(:mobileexplorer)
       def is_device?(type)     
-        puts "******* Neat_Device #{request.env['Neat-Device']}"             
-        request.env['Neat-Device'] || request.user_agent.to_s.downcase.include?(type.to_s.downcase)
+        puts "******* Neat_Device #{request.headers['Neat-Device']}"             
+        request.headers['Neat-Device'] || request.user_agent.to_s.downcase.include?(type.to_s.downcase)
       end
     end
   end
